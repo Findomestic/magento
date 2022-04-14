@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.form.content">
+            <block class="Findomestic\MagentoRedirectPay\Block\Catalog\Product\View\Enquiry" name="product.info.enquiry.after" after="product.info.addtocart"
+                   template="Findomestic_MagentoRedirectPay::catalog/product/view/findomesticProductAfter.phtml">
+            </block>
+            <block class="Findomestic\MagentoRedirectPay\Block\Catalog\Product\View\Enquiry" name="product.info.enquiry.before" before="product.info.addtocart"
+                   template="Findomestic_MagentoRedirectPay::catalog/product/view/findomesticProductBefore.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

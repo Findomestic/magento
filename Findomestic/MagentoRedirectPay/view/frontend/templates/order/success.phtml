@@ -1,0 +1,50 @@
+<?php
+/**
+ * @var  \Findomestic\MagentoRedirectPay\Block\Checkout\Success $block
+ */
+?>
+
+<?php if (!empty($block->getOrderIds())):?>
+    <?php foreach ($block->getOrderIds() as $orderId):?>
+        <?php $order = $block->getOrderById((int) $orderId);?>
+        <?php if ($order):?>
+            <?php
+                $payment = $order->getPayment();
+                $method = $payment->getMethodInstance();
+                $methodCode = $method->getCode();
+
+                if($methodCode == 'findomesticpayment'){
+                    ?>
+                    <div id="findomestic-success">
+                        <div class="findomestic-success-title">
+                            <div class="findomestic-success-title-col findomestic-success-title-img">
+                                <img id="eps" src="<?php echo $block->getLogo(); ?>" alt="Findomestic" />
+                            </div>
+                            <div class="findomestic-success-title-col findomestic-success-title-text">
+                                <h3>
+                                    Bene! Abbiamo ricevuto la tua richiesta.
+                                </h3>
+                            </div>
+                        </div>
+
+                        <p>
+                            A breve riceverai un’email da Findomestic con tutte le istruzioni per seguirla
+                        </p>
+                    </div>
+                    <?php
+                    /*
+                    echo 'TITLE: ' . $method->getTitle() . '<----------- <br><br>';
+                    echo 'CODE: ' . $method->getCode() . '<-----------<br><br>';
+                    //echo 'INFOINSTANCE: ' . $method->getInfoInstance() . '<-----------<br><br>';
+                    echo 'ID: ' . $method->getId() . '<-----------<br><br>';
+
+                    echo '<pre>';
+                    print_r(get_class_methods($method));
+                    echo '</pre>';
+                    */
+                }
+
+            ?>
+        <?php endif; ?>
+    <?php endforeach ;?>
+<?php endif; ?>

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @var \Findomestic\MagentoRedirectPay\Block\Catalog\Product\View\Enquiry $block
+ */
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$cart = $objectManager->get('\Magento\Checkout\Model\Cart');
+
+$price = $cart->getQuote()->getGrandTotal();
+
+$extraClass = '';
+
+echo $block->findomesticInCartHtml($price, $extraClass);
+
+
+echo $block->getMoreInfoPopup($extraClass);
+

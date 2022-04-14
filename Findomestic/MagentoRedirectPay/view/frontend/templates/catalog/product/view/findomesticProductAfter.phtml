@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @var \Findomestic\MagentoRedirectPay\Block\Catalog\Product\View\Enquiry $block
+ */
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');//get current product
+$price = $product->getPrice();
+
+$extraClass = '';
+
+$html = $block->findomesticInProductHtml($price, $extraClass, 'after');
+echo $html;
+
+if($html != ''){
+    echo $block->getMoreInfoPopup($extraClass);
+}
+
+

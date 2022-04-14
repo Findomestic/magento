@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="findomesticpayment" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Findomestic payment</label>
+                <field id="active" translate="label comment" sortOrder="10" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="paymentMode" translate="label comment" sortOrder="11" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Modalità (test o live)</label>
+                    <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\ListMode</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Titolo</label>
+                </field>
+                <group id="findomesticpayment_live" translate="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Live configuration</label>
+                    <field id="tvei" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Codice venditore</label>
+                        <config_path>payment/findomesticpayment_live/tvei</config_path>
+                    </field>
+                    <field id="prf" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>PRF</label>
+                        <config_path>payment/findomesticpayment_live/prf</config_path>
+                    </field>
+                    <field id="CodiceFinalita" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Codice finalità</label>
+                        <config_path>payment/findomesticpayment_live/CodiceFinalita</config_path>
+                    </field>
+                    <field id="minAmount" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Importo Minimo</label>
+                        <config_path>payment/findomesticpayment_live/minAmount</config_path>
+                    </field>
+                    <field id="findomesticUrl" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Url Web App</label>
+                        <config_path>payment/findomesticpayment_live/findomesticUrl</config_path>
+                    </field>
+                    <field id="inProduct" translate="label comment" sortOrder="60" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Simulazione in scheda prodotto</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\ListButtonStyle</source_model>
+                        <config_path>payment/findomesticpayment_live/inProduct</config_path>
+                    </field>
+                    <field id="inProductPosition" translate="label comment" sortOrder="65" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Posizione in prodotto</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\InProductPosition</source_model>
+                        <config_path>payment/findomesticpayment_live/inProductPosition</config_path>
+                    </field>
+                    <field id="inCart" translate="label comment" sortOrder="70" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Simulazione nel carrello</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\ListButtonStyle</source_model>
+                        <config_path>payment/findomesticpayment_live/inCart</config_path>
+                    </field>
+                    <field id="logoColor" translate="label comment" sortOrder="80" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Colore logo</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\LogoColor</source_model>
+                        <config_path>payment/findomesticpayment_live/logoColor</config_path>
+                    </field>
+                    <field id="iconColor" translate="label comment" sortOrder="85" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Colore icona (pagina pagamento)</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\LogoColor</source_model>
+                        <config_path>payment/findomesticpayment_live/iconColor</config_path>
+                    </field>
+                    <field id="legalDisclaimer" translate="label" type="editor" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" >
+                        <label>Disclaimer legale (opzionale)</label>
+                        <config_path>payment/findomesticpayment_live/legalDisclaimer</config_path>
+                        <frontend_model>Findomestic\MagentoRedirectPay\Block\Adminhtml\System\Config\Form\Field\Editor</frontend_model>
+                    </field>
+                </group>
+                <group id="findomesticpayment_test" translate="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Test configuration</label>
+                    <field id="tvei" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Codice venditore</label>
+                        <config_path>payment/findomesticpayment_test/tvei</config_path>
+                    </field>
+                    <field id="prf" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>PRF</label>
+                        <config_path>payment/findomesticpayment_test/prf</config_path>
+                    </field>
+
+                    <field id="CodiceFinalita" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Codice finalità</label>
+                        <config_path>payment/findomesticpayment_test/CodiceFinalita</config_path>
+                    </field>
+                    <field id="minAmount" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Importo Minimo</label>
+                        <config_path>payment/findomesticpayment_test/minAmount</config_path>
+                    </field>
+                    <field id="findomesticUrl" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Url Web App</label>
+                        <config_path>payment/findomesticpayment_test/findomesticUrl</config_path>
+                    </field>
+
+                    <field id="inProduct" translate="label comment" sortOrder="60" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Simulazione in scheda prodotto</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\ListButtonStyle</source_model>
+                        <config_path>payment/findomesticpayment_test/inProduct</config_path>
+                    </field>
+                    <field id="inProductPosition" translate="label comment" sortOrder="65" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Posizione in prodotto</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\InProductPosition</source_model>
+                        <config_path>payment/findomesticpayment_test/inProductPosition</config_path>
+                    </field>
+                    <field id="inCart" translate="label comment" sortOrder="70" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Simulazione nel carrello</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\ListButtonStyle</source_model>
+                        <config_path>payment/findomesticpayment_test/inCart</config_path>
+                    </field>
+                    <field id="logoColor" translate="label comment" sortOrder="80" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Colore logo</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\LogoColor</source_model>
+                        <config_path>payment/findomesticpayment_test/logoColor</config_path>
+                    </field>
+                    <field id="iconColor" translate="label comment" sortOrder="85" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Colore icona (pagina pagamento)</label>
+                        <source_model>Findomestic\MagentoRedirectPay\Model\Config\Source\LogoColor</source_model>
+                        <config_path>payment/findomesticpayment_test/iconColor</config_path>
+                    </field>
+                    <field id="legalDisclaimer" translate="label" type="editor" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" >
+                        <label>Disclaimer legale (opzionale)</label>
+                        <frontend_model>Findomestic\MagentoRedirectPay\Block\Adminhtml\System\Config\Form\Field\Editor</frontend_model>
+                        <config_path>payment/findomesticpayment_test/legalDisclaimer</config_path>
+                    </field>
+                </group>
+                <group id="findomesticpayment_description" translate="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <comment><![CDATA[<div class="findomestic-logo"></div><div class="findomestic-payment-text">Lorem ipsum dolor sit amet.</div>]]></comment>
+                </group>
+            </group>
+
+        </section>
+    </system>
+</config>

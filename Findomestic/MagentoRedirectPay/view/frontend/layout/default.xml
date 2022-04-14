@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    layout="admin-1column"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+    <head>
+        <css src="Findomestic_MagentoRedirectPay::css/styles.css"/>
+        <script src="Findomestic_MagentoRedirectPay::js/interaction/popup.js"/>
+    </head>
+    <body>
+        <referenceContainer name="footer-container">
+            <block class="Findomestic\MagentoRedirectPay\Block\Html\Footer" name="custom_block" as="custom_block" template="Findomestic_MagentoRedirectPay::legalDisclaimer.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

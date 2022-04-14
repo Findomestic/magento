@@ -1,0 +1,20 @@
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <action name="findomestic_complete_order">
+                <settings>
+                    <url path="magentoredirectpay/order/orderAccepted/"/>
+                    <type>orderAccepted</type>
+                    <label translate="true">Findomestic accettato</label>
+                </settings>
+            </action>
+            <action name="orderCancelled">
+                <settings>
+                    <url path="magentoredirectpay/order/orderCancelled/"/>
+                    <type>orderCancelled</type>
+                    <label translate="true">Findomestic non accettato</label>
+                </settings>
+            </action>
+        </massaction>
+    </listingToolbar>
+</listing>

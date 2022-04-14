@@ -1,0 +1,301 @@
+/*
+ * PRODUCT AND CART
+*/
+
+#findomestic-info-tab{
+    padding: 15px !important;
+    border: 1px solid #CCC !important;
+    text-align: center !important;
+    -webkit-box-shadow: 0px 0px 7px -3px #000000 !important;
+    box-shadow: 0px 0px 7px -3px #000000 !important;
+    margin: 15px 0 !important;
+    background-color: #FFF !important;
+}
+#findomestic-info-tab.findomestic-info-tab-no-bg{
+    border: none !important;
+    background: none !important;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+    margin: 10px 0 0 !important;
+    padding: 0 15px 0 0 !important;
+}
+
+#findomestic-info-tab .findomestic-view-simulator{
+    width: 100% !important;
+    background-color: #378E2B !important;
+    color: #FFF !important;
+    padding: 15px 0 !important;
+    font-size: 18px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+#findomestic-info-tab .findomestic-view-simulator:hover{
+    background-color: #22B158 !important;
+}
+#findomestic-info-tab .findomestic-view-simulator-text{
+    color: #000 !important;
+    text-decoration: underline !important;
+    display: block !important;
+    font-size: 16px !important;
+
+}
+
+#findomestic-info-tab .findomestic-column-container .findomestic-view-simulator-text{
+    font-size: 14px !important;
+}
+
+#findomestic-info-tab .findomestic-view-simulator-text:hover{
+    color: #22B158 !important;
+}
+#findomestic-info-tab .findomestic-two-col-container .findomestic-view-simulator-text{
+    padding-top: 15px !important;
+}
+
+
+
+#findomestic-info-tab .findomestic-column-container{
+
+}
+#findomestic-info-tab .findomestic-column-container .findomestic-row .findomestic-view-simulator-text{
+    text-align: left !important;
+}
+#findomestic-info-tab .findomestic-column-container .findomestic-column{
+    text-align: center !important;
+}
+#findomestic-info-tab .findomestic-column-container .findomestic-row img{
+    width: 85% !important;
+}
+
+#findomestic-info-tab .findomestic-two-col-container{
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+#findomestic-info-tab .findomestic-two-col-container .findomestic-column{
+    text-align: center !important;
+    flex: 50% !important;
+}
+
+#findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-1{
+    text-align: left !important;
+    margin-right: 15px;
+    /*flex: 70% !important;*/
+}
+#findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-1 p{
+    font-size: 18px !important;
+    margin-top: 4px !important;
+}
+#findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-1 p span{
+    max-width: 100px !important;
+}
+#findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-1 p span img{
+    width: 102px !important;
+    top: 4px !important;
+    margin-left: 0 !important;
+    position: relative !important;
+}
+
+#findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-2{
+    text-align: left !important;
+    flex: 25% !important;
+}
+#findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-2 .findomestic-view-simulator{
+    font-size: 14px !important;
+}
+
+
+
+#findomestic-info-tab .findomestic-column-container .findomestic-row p{
+    font-size: 14px !important;
+    margin-top: 9px !important;
+    text-align: left !important;
+    margin-bottom: 5px !important;
+}
+#findomestic-info-tab .findomestic-column-container .findomestic-row p span{
+    max-width: 100px !important;
+}
+#findomestic-info-tab .findomestic-column-container .findomestic-row p span img{
+    max-width: 87px !important;
+    top: 3px !important;
+    margin-left: 2px !important;
+    position: relative !important;
+}
+
+
+#findomestic-info-tab .findomestic-two-col-container img{
+    width: 85% !important;
+    margin-top: 10px !important;
+}
+
+#findomestic-info-tab-container{
+    margin-bottom: 45px !important;
+}
+
+@media all and (max-width: 1200px) {
+    #findomestic-info-tab .findomestic-two-col-container{
+        margin-bottom: 5px !important;
+        display: unset !important;
+    }
+    #findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-2 a{
+        text-align: left !important;
+        padding-top: 0 !important;
+    }
+
+}
+
+@media all and (max-width: 800px) {
+    #findomestic-info-tab .findomestic-two-col-container{
+        display: unset !important;
+    }
+    #findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-1 p{
+        font-size: 14px !important;
+        margin-bottom: 15px !important;
+    }
+    #findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-1 p span img{
+        width: 90px !important;
+    }
+    #findomestic-info-tab .findomestic-two-col-container .findomestic-column.findomestic-column-2 a{
+        padding-top: 0 !important;
+        font-size: 14px !important;
+        text-align: left !important;
+    }
+    #findomestic-info-tab .findomestic-column-container .findomestic-row p{
+        margin-bottom: 15px !important;
+    }
+
+}
+
+
+/*
+ * CHECKOUT
+*/
+
+#findomestic-icon{
+    width: 20px !important;
+    margin: 0px 0 0 10px !important;
+    position: absolute !important;
+}
+
+
+/*
+ * Popup
+*/
+#findomestic-popup-link{
+    cursor: pointer !important;
+    margin: 10px 0 25px 15px !important;
+    font-size: 1.6rem !important;
+    text-align: left !important;
+}
+#findomestic-popup-link:hover{
+    color: #22B158 !important;
+}
+
+#findomestic-popup-link.findomestic-popup-link-no-bg{
+    margin: 5px 0 0 0px !important;
+    font-size: 14px !important;
+}
+.findomestic-popup{
+    display: none !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translateY(-50%) translateX(-50%) !important;
+    background-color: #FFF !important;
+    padding: 20px !important;
+    z-index: 99999 !important;
+    width: 90% !important;
+    max-width: 400px !important;
+    border: 1px solid #CCC !important;
+    -webkit-box-shadow: 0px 0px 7px -3px #000000 !important;
+    box-shadow: 0px 0px 7px -3px #000000 !important;
+    max-height: 80% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+.findomestic-popup .findomestic-popup-logo{
+    text-align: center !important;
+}
+
+.findomestic-popup .findomestic-popup-text{
+    padding: 15px 0 !important;
+    text-align: left !important;
+}
+.findomestic-popup .findomestic-popup-close{
+    font-size: 20px !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    width: 100% !important;
+    background-color: #379aa4 !important;
+    padding: 8px 0 !important;
+    max-width: 200px !important;
+    left: 50% !important;
+    position: relative !important;
+    transform: translateX(-50%) !important;
+    color: #FFF !important;
+    text-align: center !important;
+}
+.findomestic-popup .findomestic-popup-close:hover{
+    background-color: #50b9c4 !important;
+}
+.findomestic-popup .findomestic-popup-logo img{
+    width: 60% !important;
+}
+@media all and (max-width: 800px) {
+    .findomestic-popup .findomestic-popup-logo img{
+        width: 90% !important;
+    }
+    #findomestic-popup-link.findomestic-popup-link-no-bg{
+        margin: 15px 0 0 0px !important;
+        font-size: 14px !important;
+    }
+}
+.findomestic-popup.show{
+    display: block !important;
+}
+
+
+/*
+ * USER RETURN
+*/
+
+#findomestic-success{
+    padding: 20px 0 !important;
+    border-top: 2px solid #CCC !important;
+    margin: 20px 0 !important;
+
+}
+
+#findomestic-success .findomestic-success-title{
+    margin-bottom: 20px !important;
+}
+#findomestic-success .findomestic-success-title{
+}
+
+#findomestic-success .findomestic-success-title img{
+    width: 100% !important;
+    max-width: 200px !important;
+    margin-right: 20px !important;
+    margin-top: 13px !important;
+}
+
+
+@media all and (max-width: 800px) {
+    #findomestic-success .findomestic-success-title{
+    }
+}
+
+
+/*
+ * FOOTER
+ */
+#findomestic-footer{
+    padding-top: 15px !important;
+    margin-top: 15px !important;
+}
+#findomestic-footer .findomestic-legal-disclaimer *{
+    font-size: 10px !important;
+}

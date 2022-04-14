@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var  \Findomestic\MagentoRedirectPay\Block\Html\Footer $block
+ */
+
+$legalDisclaimer = $block->getlegalDisclaimer();
+
+if ($legalDisclaimer != ''){
+    ?>
+    <div id="findomestic-footer" class="findomestic-footer">
+        <div class="findomestic-legal-disclaimer">
+                <?php echo $legalDisclaimer; ?>
+        </div>
+    </div>
+    <?php
+}
+
