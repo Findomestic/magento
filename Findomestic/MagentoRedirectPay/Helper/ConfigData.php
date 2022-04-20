@@ -100,10 +100,10 @@ class ConfigData extends \Magento\Framework\App\Helper\AbstractHelper
 
     public function getFrontendOption($option, $amount){
         $mode = $this->getConfig('paymentMode');
-        $minAmount = $this->getConfig('minAmount', 'payment/findomesticpayment/findomesticpayment_'.$mode.'/');
+        $minAmount = $this->getConfig('minAmount', 'payment/findomesticpayment_'.$mode.'/');
 
         if($amount < $minAmount){
-            //return 'no';
+            return 'no';
         }
         if($mode == '' || $mode == null){
             return 'no';
