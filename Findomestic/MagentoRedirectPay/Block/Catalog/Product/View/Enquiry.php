@@ -48,7 +48,7 @@ class Enquiry extends Template
 
     public function findomesticInProduct($amount, $location){
         if($this->getLocation() != $location){
-            return $this->getLocation().'<----';
+            return $this->getLocation();
         }
         return $this->helper->getFrontendOption('inProduct', $amount);
     }
