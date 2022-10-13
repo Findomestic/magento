@@ -129,7 +129,7 @@ class InstallData implements DataPatchInterface, PatchVersionInterface
      */
     public static function getVersion()
     {
-        return '2.0.6';
+        return '2.0.7';
     }
 
     /**
@@ -142,6 +142,8 @@ class InstallData implements DataPatchInterface, PatchVersionInterface
 
     protected function addNewOrderProcessingStatus($statusCode, $label, $state = Order::STATE_PROCESSING)
     {
+        //sales_order_status
+
         /** @var StatusResource $statusResource */
         $statusResource = $this->statusResourceFactory->create();
         /** @var Status $status */
@@ -152,7 +154,7 @@ class InstallData implements DataPatchInterface, PatchVersionInterface
         ]);
         try {
             $statusResource->save($status);
-        } catch (AlreadyExistsException $exception) {
+        } catch (Exception $exception) {
             return;
         }
         $status->assignState($state, false, true);

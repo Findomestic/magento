@@ -174,8 +174,21 @@
  * CHECKOUT
 */
 
+#findomestic-checkout{
+
+}
+
+#findomestic-checkout ul{
+    list-style: disc;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+#findomestic-checkout ul li{
+    margin-bottom: 0.5rem;
+}
+
 #findomestic-icon{
-    width: 20px !important;
+    width: 23px !important;
     margin: 0px 0 0 10px !important;
     position: absolute !important;
 }

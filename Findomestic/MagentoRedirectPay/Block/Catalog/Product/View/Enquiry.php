@@ -71,18 +71,20 @@ class Enquiry extends Template
         $simulatorUrl = $this->findomesticSimulatorUrl($amount);
         $html = '<div id="findomestic-info-tab-container">';
         $flag = false;
+        $colorClass = $this->helper->getConfig('logoColor', 'payment/findomesticpayment_'.$this->mode.'/');
+        $buttonText = 'Calcola la rata';
         switch($buttonMode){
             case 'horizontal-long':
                 $flag = true;
                 $html .= '
-                <div id="findomestic-info-tab">
+                <div id="findomestic-info-tab" class="'.$colorClass.'">
                     <div class="findomestic-simulator findomestic-two-col-container">
                         <div class="findomestic-column findomestic-column-1">
                             <p>Pagamento a rate con <span><img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" /></span></p>
                         </div>
                         <div class="findomestic-column findomestic-column-2">
-                            <a class=" findomestic-view-simulator" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
 
@@ -93,14 +95,14 @@ class Enquiry extends Template
             case 'vertical-long':
                 $flag = true;
                 $html .= '
-                <div id="findomestic-info-tab">
+                <div id="findomestic-info-tab" class="'.$colorClass.'">
                     <div class="findomestic-simulator findomestic-column-container">
                         <div class="findomestic-row">
                             <p>Pagamento a rate con <span><img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" /></span></p>
                         </div>
                         <div class="findomestic-row">
-                            <a class=" findomestic-view-simulator" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
                     </div>
@@ -109,14 +111,14 @@ class Enquiry extends Template
             case 'no-button-horizontal-long':
                 $flag = true;
                 $html .= '
-                <div id="findomestic-info-tab">
+                <div id="findomestic-info-tab" class="'.$colorClass.'">
                     <div class="findomestic-simulator findomestic-two-col-container">
                         <div class="findomestic-column findomestic-column-1">
                             <p>Pagamento a rate con <span><img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" /></span></p>
                         </div>
                         <div class="findomestic-column findomestic-column-2">
-                            <a class=" findomestic-view-simulator-text" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator-text '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
 
@@ -127,14 +129,14 @@ class Enquiry extends Template
             case 'no-button-vertical-long':
                 $flag = true;
                 $html .= '
-                <div id="findomestic-info-tab">
+                <div id="findomestic-info-tab" class="'.$colorClass.'">
                     <div class="findomestic-simulator findomestic-column-container">
                         <div class="findomestic-row">
                             <p>Pagamento a rate con <span><img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" /></span></p>
                         </div>
                         <div class="findomestic-row">
-                            <a class=" findomestic-view-simulator-text" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator-text '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
                     </div>
@@ -144,14 +146,14 @@ class Enquiry extends Template
                 $flag = true;
                 $extraClass = 'findomestic-popup-link-no-bg';
                 $html .= '
-                <div id="findomestic-info-tab" class="findomestic-info-tab-no-bg">
+                <div id="findomestic-info-tab" class="findomestic-info-tab-no-bg '.$colorClass.'">
                     <div class="findomestic-simulator findomestic-two-col-container">
                         <div class="findomestic-column findomestic-column-1">
                             <p>Pagamento a rate con <span><img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" /></span></p>
                         </div>
                         <div class="findomestic-column findomestic-column-2">
-                            <a class=" findomestic-view-simulator-text" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator-text '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
 
@@ -163,14 +165,14 @@ class Enquiry extends Template
                 $flag = true;
                 $extraClass = 'findomestic-popup-link-no-bg';
                 $html .= '
-                <div id="findomestic-info-tab" class="findomestic-info-tab-no-bg">
+                <div id="findomestic-info-tab" class="findomestic-info-tab-no-bg '.$colorClass.'">
                     <div class="findomestic-simulator findomestic-column-container">
                         <div class="findomestic-row">
                             <p>Pagamento a rate con <span><img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" /></span></p>
                         </div>
                         <div class="findomestic-row">
-                            <a class=" findomestic-view-simulator-text" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator-text '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
                     </div>
@@ -179,14 +181,14 @@ class Enquiry extends Template
             case 'horizontal':
                 $flag = true;
                 $html .= '
-                <div id="findomestic-info-tab">
+                <div id="findomestic-info-tab" class="'.$colorClass.'">
                     <div class="findomestic-simulator findomestic-two-col-container">
                         <div class="findomestic-column">
                             <img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" />
                         </div>
                         <div class="findomestic-column">
-                            <a class=" findomestic-view-simulator" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
                     </div>
@@ -195,14 +197,14 @@ class Enquiry extends Template
             case 'vertical':
                 $flag = true;
                 $html .= '
-                <div id="findomestic-info-tab">
+                <div id="findomestic-info-tab" class="'.$colorClass.'">
                     <div class="findomestic-simulator findomestic-column-container">
                         <div class="findomestic-row">
                             <img id="eps" src="' . $this->getLogo(). '" alt="Findomestic" />
                         </div>
                         <div class="findomestic-row">
-                            <a class=" findomestic-view-simulator" href="' . $simulatorUrl. '" target="_blank">
-                                Calcola la rata
+                            <a class=" findomestic-view-simulator '.$colorClass.'" href="' . $simulatorUrl. '" target="_blank">
+                                '.$buttonText.'
                             </a>
                         </div>
                     </div>

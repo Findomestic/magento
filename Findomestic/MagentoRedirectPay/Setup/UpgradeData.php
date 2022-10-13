@@ -28,7 +28,6 @@ class UpgradeData implements UpgradeDataInterface
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
         $installer = $setup;
-
         $installer->startSetup();
 
         if (version_compare($context->getVersion(), '2.0.6', '<')) {
@@ -43,6 +42,16 @@ class UpgradeData implements UpgradeDataInterface
 
     protected function addNewOrderProcessingStatus($statusCode, $label, $state = Order::STATE_PROCESSING)
     {
+
+        //sales_order_status
+        /*
+        $temp = $this->statusResourceFactory->create();
+        $temp->load($statusCode, 'status');
+        
+        if(count($temp->getData())){
+            throw new Exception('Status already exists', 100);
+        }
+        */
         /** @var StatusResource $statusResource */
         $statusResource = $this->statusResourceFactory->create();
         /** @var Status $status */
@@ -53,7 +62,7 @@ class UpgradeData implements UpgradeDataInterface
         ]);
         try {
             $statusResource->save($status);
-        } catch (AlreadyExistsException $exception) {
+        } catch (Exception $exception) {
             return;
         }
         $status->assignState($state, false, true);
