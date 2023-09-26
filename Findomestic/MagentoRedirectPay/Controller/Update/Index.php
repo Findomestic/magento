@@ -89,14 +89,27 @@ class Index extends Action{
 
         // IMPORTANT: contrary to most cases, here, 0 is success, any other case is denied/failure
         if($esito == '0'){
-            $order->setState("paiment_review")->setStatus("findomestic_preapproved");
+            $order->setState(Order::STATE_PROCESSING)->setStatus("findomestic_accepted");
             $order->save();
         } else{
+            $order->cancel();
+            $order->save();
             $order->setState("canceled")->setStatus("findomestic_denied");
             $order->save();
         }
 
         return true;
+
+    }
+
+    public function cancel($order)
+    {
+        if ($order->canCancel()) {
+            //$order->getPayment()->cancel();
+            $order->registerCancellation();
+
+            $order->_eventManager->dispatch('order_cancel_after', ['order' => $this]);
+        }
 
     }
 

@@ -36,6 +36,12 @@ class UpgradeData implements UpgradeDataInterface
             $this->addNewOrderProcessingStatus('findomestic_accepted', 'Findomestic Richiesta accolta', Order::STATE_COMPLETE);
             $this->addNewOrderProcessingStatus('findomestic_denied', 'Findomestic Richiesta non accolta', Order::STATE_CANCELED);
         }
+        if (version_compare($context->getVersion(), '2.0.13', '<')) {
+            $this->addNewOrderProcessingStatus('findomestic_preapproved', 'Findomestic Richiesta in valutazione');
+            $this->addNewOrderProcessingStatus('findomestic_pending', 'Findomestic Inserimento dati in corso');
+            $this->addNewOrderProcessingStatus('findomestic_accepted', 'Findomestic Richiesta accolta', Order::STATE_PROCESSING);
+            $this->addNewOrderProcessingStatus('findomestic_denied', 'Findomestic Richiesta non accolta', Order::STATE_CANCELED);
+        }
 
         $installer->endSetup();
     }
